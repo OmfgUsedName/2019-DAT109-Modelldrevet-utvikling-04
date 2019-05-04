@@ -1,0 +1,42 @@
+class Exhibition {
+  int id;
+  String name;
+  String description;
+  User[] team;
+  String[] urlPhoto;
+  
+  1 -- 1..4 User;
+  
+}
+
+class User {
+  int id;
+  String name;
+  String type;
+
+}
+
+class Vote {
+  int id;
+  
+  * -- 1 User;
+  * -- 1 Exhibition;
+}//$?[End_of_model]$?
+
+class Vote
+{
+  position.association User__Vote 109,11 0,88;
+    position.association Exhibition__Vote 30,0 21,126;
+position 123 238 109 58;
+}
+
+class User
+{
+  position 367 183 112 92;
+}
+
+class Exhibition
+{
+  position.association Exhibition__User 148,91 30,0;
+  position 109 26 148 126;
+}

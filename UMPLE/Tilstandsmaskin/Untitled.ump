@@ -1,0 +1,81 @@
+class homePage{
+  loginState{
+    onLoginScreen{
+      correctLogin -> loggedIn;
+      incorrectLoginInformation -> incorrectLogin;
+    }
+    loggedIn{
+      displayHomePage -> homePage;
+    }
+    incorrectLogin{
+      displayError -> onLoginScreen;
+    }
+  }
+  juryPageState{
+    homePage{
+      selectsExhibiton -> exhibitionPage;
+      selectsAdmin -> admin;
+      selectsLiveResult -> liveResultPage;
+    }
+    exhibitionPage{
+    
+    }
+    admin {
+      editExhibitionTeam -> editExhibition;
+    }
+    editExhibition{
+      addTeamMember -> editExhibition;
+      changeExhibitionDetails -> editExhibition;
+    }
+    liveResultPage{
+    }
+  }
+  expoPageState{
+      homePage{
+      selectsExhibiton -> exhibitionPage;
+      editMyExhibition -> myExhibitionPage;
+      selectsLiveResult -> liveResultPage;
+    }
+    myExhibitionPage{
+      edit -> editExhibition;
+    }
+        exhibitionPage{
+      sendVote -> voteDetailsPage;
+          
+    }
+        editExhibition{
+      addTeamMember -> editExhibition;
+      changeExhibitionDetails -> editExhibition;
+    }
+    voteDetailsPage{
+      sendVote -> database;
+    }
+    database{
+      newVote -> exhibitionPage;
+      replaceOldVote -> exhibitionPage;
+    }
+    
+  }
+  spectatorPageState{
+      homePage{
+      selectsExhibiton -> exhibitionPage;
+      selectsLiveResult -> liveResultPage;
+    }
+        exhibitionPage{
+      sendVote -> voteDetailsPage;
+    }
+    voteDetailsPage{
+      sendVote -> database;
+    }
+    database{
+      newVote -> exhibitionPage;
+      replaceOldVote -> exhibitionPage;
+    }
+  }
+}
+//$?[End_of_model]$?
+
+class homePage
+{
+  position 50 30 109 45;
+}

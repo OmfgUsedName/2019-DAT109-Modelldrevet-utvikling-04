@@ -1,0 +1,10 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Site View 2">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="410" gr:y="290" id="sv2#miu5" action="true" landmark="false" protected="false" secure="false" moduleId="mov1#mpkg2#opm3">
+      <Link id="sv2#miu5#ln7" name="Flow7" to="sv2#page6" automaticCoupling="true" type="transport" validate="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="440" gr:y="160" id="sv2#miu6" action="true" moduleId="mov1#mpkg2#opm2">
+      <Link id="sv2#miu6#ln5" name="Flow5" to="sv2#page5" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="-222,-29,88,-124"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

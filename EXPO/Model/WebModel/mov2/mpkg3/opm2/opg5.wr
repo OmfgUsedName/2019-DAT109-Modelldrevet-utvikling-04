@@ -1,0 +1,18 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg3#opm2#opg5" name="Add exhibition" transaction="true" gr:x="315" gr:y="40">
+  <OperationUnits>
+    <CreateUnit id="mov2#mpkg3#opm2#opg5#cru7" name="Create5" gr:x="0" gr:y="0" entity="ent1">
+      <KOLink id="mov2#mpkg3#opm2#opg5#cru7#kln29" name="KOFlow29" to="mov2#mpkg3#opm2#kocu9" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg3#opm2#opg5#cru7#oln68" name="OKFlow68" to="mov2#mpkg3#opm2#opg5#mfu22">
+        <LinkParameter id="mov2#mpkg3#opm2#opg5#cru7#oln68#par334" name="2_Group.oid(defaultGroup)" sourceValue="2" target="mov2#mpkg3#opm2#opg5#mfu22.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#mpkg3#opm2#opg5#cru7#oln68#par335" name="2_Group.oid(groups)" sourceValue="2" target="mov2#mpkg3#opm2#opg5#mfu22.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg3#opm2#opg5#cru7#oln68#par336" name="leader_KeyCondition46 [id]" source="ent1#att14Array" target="mov2#mpkg3#opm2#opg5#mfu22#su44#kcond46.userOID"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit gr:x="0" gr:y="150" id="mov2#mpkg3#opm2#opg5#mfu22" name="Update22" entity="User">
+      <Selector id="mov2#mpkg3#opm2#opg5#mfu22#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg3#opm2#opg5#mfu22#su44#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg3#opm2#opg5#mfu22#oln109" name="OKFlow109" to="mov2#mpkg3#opm2#okcu14" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationGroup>

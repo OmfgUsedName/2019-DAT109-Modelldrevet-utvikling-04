@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="220" gr:y="260" id="sv1#page2" name="ProductCategories" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page2#pwu2" name="&lt;&lt;List&gt;&gt;" sortable="true" checkable="false" useCountQuery="false" linkOrder="sv1#page2#pwu2#ln1" entity="ent5">
+      <Link id="sv1#page2#pwu2#ln1" name="Flow1" to="sv1#page3#pwu1" type="normal" validate="true">
+        <Property id="sv1#page2#pwu2#ln1#prop1" name="&lt;&lt;ParamBindingGroup&gt;&gt;"/>
+        <LinkParameter id="sv1#page2#pwu2#ln1#par1" name="SelectedCategory_Block Factor" target="sv1#page3#pwu1.blockFactor" sourceValue="SelectedCategory"/>
+        <LinkParameter id="sv1#page2#pwu2#ln1#par2" name="_Block Index" blank="true" target="sv1#page3#pwu1.block"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page2#pwu2">
+          <layout:Link link="sv1#page2#pwu2#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

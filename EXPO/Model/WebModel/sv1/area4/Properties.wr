@@ -1,0 +1,10 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="685" gr:y="865" id="sv1#area4" name="Admin" landmark="true" protected="false" defaultPage="sv1#area4#page12">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="310" gr:y="155" id="sv1#area4#miu18" action="true" moduleId="mov2#mpkg3#opm4">
+      <KOLink id="sv1#area4#miu18#kln24" name="KOFlow24" to="sv1#area4#page12#mssu9" gr:bendpoints="-179,66,156,-14">
+        <LinkParameter id="sv1#area4#miu18#kln24#par153" name="Sucessfully deleted_Shown Messages" sourceValue="Sucessfully deleted" target="sv1#area4#page12#mssu9.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="295" gr:y="45" id="sv1#area4#miu20" action="true" moduleId="mov2#mpkg3#opm2"/>
+  </OperationUnits>
+</Area>

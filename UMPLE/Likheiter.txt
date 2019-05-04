@@ -1,0 +1,8 @@
+Eg vil først og fremst påpeike at prosjekt innleveringa frå tidlegare ikkje brukte java som språk, men 
+node, firebase og dart. Uavhengig av dette ville eg sei at koden hadde sett mykje lik ut om vi hadde brukt java.
+Sql koden ser relativt lik ut som den som blei brukt. Json på den andre sida brukte vi berre til overføring av
+informasjon, og likna dermed ikkje på det der i det heile. 
+
+For tilstandsmodellen var det lite av koden som faktisk var lik. Vi brukte som sagt ingen av dei språka, men flyten virka grei
+Det kan hende at det er meininga ein skal modellere på ein anna måte her slik at resultatet hadde blitt betre. 
+Ser veldig få likheitar utan om at den generelle flyten som sagt virka grei.

@@ -1,0 +1,86 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1175" gr:y="410" id="sv1#mpage2" name="User tab">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv1#mpage2#gtu2" name="Get current user" contextParameters="UserCtxParam">
+      <Link id="sv1#mpage2#gtu2#ln7" name="Flow7" to="sv1#mpage2#dau3" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit gr:x="150" gr:y="0" id="sv1#mpage2#dau3" name="Select user" entity="User" displayAttributes="userName">
+      <Selector id="sv1#mpage2#dau3#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mpage2#dau3#su1#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#mpage2#dau3#ln10" name="Flow10" to="sv1#lou2" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <EntryUnit gr:x="15" gr:y="115" id="sv1#mpage2#enu5" name="Login" customDescriptor="false" linkOrder="sv1#mpage2#enu5#ln18">
+      <Field id="sv1#mpage2#enu5#fld10" name="Username" type="string" modifiable="true"/>
+      <Field id="sv1#mpage2#enu5#fld11" name="Password" type="password" modifiable="true"/>
+      <Link id="sv1#mpage2#enu5#ln18" name="Log in" to="sv1#miu4" type="normal" validate="true">
+        <LinkParameter id="sv1#mpage2#enu5#ln18#par9" name="Password_password" source="sv1#mpage2#enu5#fld11" target="sv1#miu4.mov1#mpkg1#opm1#icu2#icp10"/>
+        <LinkParameter id="sv1#mpage2#enu5#ln18#par10" name="Username_username" source="sv1#mpage2#enu5#fld10" target="sv1#miu4.mov1#mpkg1#opm1#icu2#icp11"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="15" gr:y="195" id="sv1#mpage2#mssu1" name="Registration" linkOrder="sv1#mpage2#mssu1#ln2">
+      <Link id="sv1#mpage2#mssu1#ln2" name="Sign up" to="sv1#miu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Message xml:space="preserve">Login or sign up for an account to vote on exhibitions</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="6">
+                <layout:Unit unitId="sv1#mpage2#enu5">
+                  <layout:Field field="sv1#mpage2#enu5#fld10"/>
+                  <layout:Field field="sv1#mpage2#enu5#fld11"/>
+                  <layout:Link link="sv1#mpage2#enu5#ln18"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="6">
+                <layout:Grid containerType="grid">
+                  <layout:Row>
+                    <layout:Cell colspan="6">
+                      <layout:Unit unitId="sv1#mpage2#mssu1">
+                        <layout:Link link="sv1#mpage2#mssu1#ln2"/>
+                      </layout:Unit>
+                    </layout:Cell>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell colspan="6">
+                      <layout:Grid containerType="cell">
+                        <layout:Row>
+                          <layout:Cell>
+                            <layout:Unit unitId="sv1#mpage2#dau3">
+                              <layout:Attribute attribute="userName"/>
+                            </layout:Unit>
+                          </layout:Cell>
+                        </layout:Row>
+                      </layout:Grid>
+                    </layout:Cell>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                  </layout:Row>
+                </layout:Grid>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</MasterPage>

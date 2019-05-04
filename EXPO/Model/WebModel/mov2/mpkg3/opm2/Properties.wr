@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov2#mpkg3#opm2" name="Add exhibition">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg3#opm2#icu4" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#mpkg3#opm2#icu4#icp21" name="member 1"/>
+      <InputCollectorParameter id="mov2#mpkg3#opm2#icu4#icp22" name="name"/>
+      <InputCollectorParameter id="mov2#mpkg3#opm2#icu4#icp23" name="photourl"/>
+      <InputCollectorParameter id="mov2#mpkg3#opm2#icu4#icp24" name="description"/>
+      <OKLink id="mov2#mpkg3#opm2#icu4#oln70" name="OKFlow70" to="mov2#mpkg3#opm2#opg5#cru7">
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par195" name="description_description" source="mov2#mpkg3#opm2#icu4#icp24" target="mov2#mpkg3#opm2#opg5#cru7.ent1#att4"/>
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par196" name="member 1_leader" source="mov2#mpkg3#opm2#icu4#icp21" target="mov2#mpkg3#opm2#opg5#cru7.ent1#att14"/>
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par197" name="name_name" source="mov2#mpkg3#opm2#icu4#icp22" target="mov2#mpkg3#opm2#opg5#cru7.ent1#att3"/>
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par198" name="photourl_urlPhoto" source="mov2#mpkg3#opm2#icu4#icp23" target="mov2#mpkg3#opm2#opg5#cru7.ent1#att7"/>
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par199" name="member 1_User.id(ExhibitionToUser)" source="mov2#mpkg3#opm2#icu4#icp21" target="mov2#mpkg3#opm2#opg5#cru7.rel25#role49.userOID"/>
+        <LinkParameter id="mov2#mpkg3#opm2#icu4#oln70#par200" name="member 1_Vote.user_id(ExhibitionToVote)" source="mov2#mpkg3#opm2#icu4#icp21" target="mov2#mpkg3#opm2#opg5#cru7.rel27#role54.ent2#att9"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="730" gr:y="50" id="mov2#mpkg3#opm2#okcu14" name="OK Port14"/>
+    <KOCollectorUnit gr:x="730" gr:y="175" id="mov2#mpkg3#opm2#kocu9" name="KO Port9"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,71 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg1#hym1#page1" name="Registration" gr:x="495" gr:y="115">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg1#hym1#page1#enu1" name="User Information" gr:x="0" gr:y="0" entity="User" fieldOrder="mov1#mpkg1#hym1#page1#enu1#fld1 mov1#mpkg1#hym1#page1#enu1#fld2 mov1#mpkg1#hym1#page1#enu1#fld8 mov1#mpkg1#hym1#page1#enu1#fld9" linkOrder="mov1#mpkg1#hym1#page1#enu1#ln12">
+      <Field id="mov1#mpkg1#hym1#page1#enu1#fld1" name="username" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg1#hym1#page1#enu1#fld1#mnd1" name="Mandatory UserName" errorMessage="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg1#hym1#page1#enu1#fld2" name="password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg1#hym1#page1#enu1#fld2#mnd2" name="Mandatory password" errorMessage="Obbligatory field"/>
+        </VRules>
+      </Field>
+      <VRules/>
+      <Field id="mov1#mpkg1#hym1#page1#enu1#fld8" name="confirm password" ajaxEventEnabled="false" type="password" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov1#mpkg1#hym1#page1#enu1#fld8#cmp1" name="Require Same Password" predicate="eq" valueField="mov1#mpkg1#hym1#page1#enu1#fld2" errorMessage="This field and password have to be equal!!!"/>
+          <MandatoryValidationRule id="mov1#mpkg1#hym1#page1#enu1#fld8#mnd8" name="Mandatory password" errorMessage="Obbligatory field"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg1#hym1#page1#enu1#fld9" name="captcha" type="string" modifiable="true">
+        <VRules>
+          <CaptchaValidationRule id="mov1#mpkg1#hym1#page1#enu1#fld9#captcha1" name="Captcha validation" errorMessage="The code written is wrong; please digit the correct code..." cfg_ignoreCase="true"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg1#hym1#page1#enu1#ln12" name="Register" to="mov1#mpkg1#hym1#opg1#cru1" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg1#hym1#page1#enu1#ln12#par3" name="password_passord" source="mov1#mpkg1#hym1#page1#enu1#fld2" target="mov1#mpkg1#hym1#opg1#cru1.password"/>
+        <LinkParameter id="mov1#mpkg1#hym1#page1#enu1#ln12#par4" name="username_username" source="mov1#mpkg1#hym1#page1#enu1#fld1" target="mov1#mpkg1#hym1#opg1#cru1.userName"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg1#hym1#page1#enu1">
+          <layout:LayoutParameter name="mandatory-fields" value="true" type="unit"/>
+          <layout:Field field="mov1#mpkg1#hym1#page1#enu1#fld1"/>
+          <layout:Field field="mov1#mpkg1#hym1#page1#enu1#fld2"/>
+          <layout:Field field="mov1#mpkg1#hym1#page1#enu1#fld8"/>
+          <layout:Field field="mov1#mpkg1#hym1#page1#enu1#fld9"/>
+          <layout:Link link="mov1#mpkg1#hym1#page1#enu1#ln12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

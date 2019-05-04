@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area5#page11" name="Results" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="sv1#area5#page11#pwu4" name="Scoreboard" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" distinct="true" displayAttributes="ent1#att3 avg(rel32#role64.ent2#att8)" entity="ent1">
+      <PreSelector id="sv1#area5#page11#pwu4#su16" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#pwu4#su16#rcond1" name="RoleCondition1" predicate="in" implied="false"/>
+      </PreSelector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#pwu4">
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="avg(rel32#role64.ent2#att8)"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

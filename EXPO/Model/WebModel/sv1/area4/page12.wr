@@ -1,0 +1,137 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#page12" name="Admin page" protected="true" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv1#area4#page12#enu14" name="Add team" gr:x="130" gr:y="0" entity="User" linkOrder="sv1#area4#page12#enu14#ln81">
+      <Field id="sv1#area4#page12#enu14#fld23" name="name" type="string" modifiable="true"/>
+      <Field id="sv1#area4#page12#enu14#fld24" name="description" type="string" modifiable="true"/>
+      <Field id="sv1#area4#page12#enu14#fld25" name="urlPhoto" type="string" modifiable="true"/>
+      <SelectionField id="sv1#area4#page12#enu14#sfld17" name="Leader" type="string" attribute="userName"/>
+      <Link id="sv1#area4#page12#enu14#ln81" name="Add exhibition" to="sv1#area4#miu20" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page12#enu14#ln81#par185" name="description_description" source="sv1#area4#page12#enu14#fld24" target="sv1#area4#miu20.mov2#mpkg3#opm2#icu4#icp24"/>
+        <LinkParameter id="sv1#area4#page12#enu14#ln81#par186" name="Leader_member 1" source="sv1#area4#page12#enu14#sfld17" target="sv1#area4#miu20.mov2#mpkg3#opm2#icu4#icp21"/>
+        <LinkParameter id="sv1#area4#page12#enu14#ln81#par187" name="name_name" source="sv1#area4#page12#enu14#fld23" target="sv1#area4#miu20.mov2#mpkg3#opm2#icu4#icp22"/>
+        <LinkParameter id="sv1#area4#page12#enu14#ln81#par188" name="urlPhoto_photourl" source="sv1#area4#page12#enu14#fld25" target="sv1#area4#miu20.mov2#mpkg3#opm2#icu4#icp23"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="sv1#area4#page12#enu15" name="Remove team" gr:x="130" gr:y="90" linkOrder="sv1#area4#page12#enu15#ln72" entity="ent1">
+      <SelectionField id="sv1#area4#page12#enu15#sfld16" name="Exhibition" type="string" attribute="ent1#att3"/>
+      <Link id="sv1#area4#page12#enu15#ln72" name="Delete exhibition" to="sv1#area4#miu18" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page12#enu15#ln72#par221" name="Exhibition_id" source="sv1#area4#page12#enu15#sfld16" target="sv1#area4#miu18.mov2#mpkg3#opm4#icu5#icp19"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="5" id="sv1#area4#page12#seu7" name="Selector7" entity="User">
+      <Link id="sv1#area4#page12#seu7#ln56" name="Flow56" to="sv1#area4#page12#enu14" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page12#seu7#ln56#par109" name="username_Leader [label]" source="userNameArray" target="sv1#area4#page12#enu14#sfld17_label"/>
+        <LinkParameter id="sv1#area4#page12#seu7#ln56#par110" name="id_Leader [output]" source="userOIDArray" target="sv1#area4#page12#enu14#sfld17_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="90" id="sv1#area4#page12#seu8" name="Selector8" entity="ent1">
+      <Link id="sv1#area4#page12#seu8#ln57" name="Flow57" to="sv1#area4#page12#enu15" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page12#seu8#ln57#par111" name="name_Exhibition [label]" source="ent1#att3Array" target="sv1#area4#page12#enu15#sfld16_label"/>
+        <LinkParameter id="sv1#area4#page12#seu8#ln57#par112" name="id_Exhibition [output]" source="ent1#att14Array" target="sv1#area4#page12#enu15#sfld16_output"/>
+        <LinkParameter id="sv1#area4#page12#seu8#ln57#par220" name="leader_Key Condition [leader]" source="ent1#att14Array" target="sv1#area4#page12#enu15.ent1#att14"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit gr:x="0" gr:y="180" id="sv1#area4#page12#mssu9" name="Message9"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page12#enu14">
+          <layout:Field field="sv1#area4#page12#enu14#fld23"/>
+          <layout:Field field="sv1#area4#page12#enu14#fld24"/>
+          <layout:Field field="sv1#area4#page12#enu14#fld25"/>
+          <layout:Field field="sv1#area4#page12#enu14#sfld17"/>
+          <layout:Link link="sv1#area4#page12#enu14#ln81"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page12#enu15">
+          <layout:Field field="sv1#area4#page12#enu15#sfld16"/>
+          <layout:Link link="sv1#area4#page12#enu15#ln72"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page12#mssu9"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

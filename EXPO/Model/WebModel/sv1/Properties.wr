@@ -1,0 +1,31 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Homepage" landmarks="sv1#area1 sv1#area5 sv1#area6 sv1#area4" homePage="sv1#area1#page13">
+  <OperationUnits>
+    <LogoutUnit gr:x="1570" gr:y="435" id="sv1#lou2" name="Logout2" siteView="sv1" invalidateSession="true"/>
+    <ModuleInstanceUnit gr:x="1495" gr:y="630" id="sv1#miu1" action="false" moduleId="mov1#mpkg1#hym1"/>
+    <ModuleInstanceUnit gr:x="1490" gr:y="540" id="sv1#miu4" action="true" moduleId="mov1#mpkg1#opm1"/>
+    <CreateUnit gr:x="815" gr:y="185" id="sv1#cru11" name="Create11" entity="ent2">
+      <OKLink id="sv1#cru11#oln97" name="OKFlow97" to="sv1#area1#page9#mssu2" gr:bendpoints="87,68,472,-42;93,169,478,59;-380,168,5,58">
+        <LinkParameter id="sv1#cru11#oln97#par313" name="Vote sent!_Shown Messages" sourceValue="Vote sent!" target="sv1#area1#page9#mssu2.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#cru11#kln45" name="KOFlow45" to="sv1#mfu21"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="770" gr:y="285" id="sv1#mfu21" name="Update21" entity="ent2">
+      <Selector id="sv1#mfu21#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu21#su39#kcond41" name="KeyCondition41" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu21#oln98" name="OKFlow98" to="sv1#area1#page9#mssu2">
+        <LinkParameter id="sv1#mfu21#oln98#par314" name="Vote updated!_Shown Messages" sourceValue="Vote updated!" target="sv1#area1#page9#mssu2.shownMessages"/>
+      </OKLink>
+    </ModifyUnit>
+    <GetUnit gr:x="955" gr:y="165" id="sv1#gtu22" name="Get22" contextParameters="UserCtxParam" linkOrder="sv1#gtu22#ln117 sv1#gtu22#ln130">
+      <Link id="sv1#gtu22#ln117" name="Flow117" to="sv1#cru11" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu22#ln117#par302" name="UserCtxParam.id_user.id(VoteToUser)" source="sv1#gtu22.UserCtxParam" target="sv1#cru11.rel31#role61.userOID"/>
+        <LinkParameter id="sv1#gtu22#ln117#par303" name="UserCtxParam.id_user_id" source="sv1#gtu22.UserCtxParam" target="sv1#cru11.ent2#att9"/>
+      </Link>
+      <Link id="sv1#gtu22#ln130" name="Flow130" to="sv1#mfu21" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu22#ln130#par328" name="UserCtxParam.id_user.id(VoteToUser)" source="sv1#gtu22.UserCtxParam" target="sv1#mfu21.rel31#role61.userOID"/>
+        <LinkParameter id="sv1#gtu22#ln130#par332" name="UserCtxParam.id_KeyCondition41 [user_id]" source="sv1#gtu22.UserCtxParam" target="sv1#mfu21#su39#kcond41.ent2#att9"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</SiteView>

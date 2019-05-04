@@ -1,0 +1,17 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="60" id="mov2#mpkg3#opm4" name="Delete exhibition">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg3#opm4#icu5" gr:x="50" gr:y="110" linkOrder="mov2#mpkg3#opm4#icu5#ln132">
+      <InputCollectorParameter id="mov2#mpkg3#opm4#icu5#icp19" name="id"/>
+      <OKLink id="mov2#mpkg3#opm4#icu5#oln55" name="OKFlow55" to="mov2#mpkg3#opm4#opg8#dlu1">
+        <LinkParameter id="mov2#mpkg3#opm4#icu5#oln55#par222" name="id_KeyCondition6 [leader]" source="mov2#mpkg3#opm4#icu5#icp19" target="mov2#mpkg3#opm4#opg8#dlu1#su6#kcond6.ent1#att14"/>
+      </OKLink>
+      <Link id="mov2#mpkg3#opm4#icu5#ln132" name="Flow132" to="mov2#mpkg3#opm4#opg8#mfu23" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg3#opm4#icu5#ln132#par337" name="id_KeyCondition47 [id]" source="mov2#mpkg3#opm4#icu5#icp19" target="mov2#mpkg3#opm4#opg8#mfu23#su45#kcond47.userOID"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="945" gr:y="85" id="mov2#mpkg3#opm4#okcu5" name="Exhibition deleted"/>
+    <KOCollectorUnit gr:x="945" gr:y="270" id="mov2#mpkg3#opm4#kocu5" name="Exhibition does not exist">
+      <OutputCollectorParameter id="mov2#mpkg3#opm4#kocu5#ocp5" name="Exhibition does not exist"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

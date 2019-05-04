@@ -1,0 +1,15 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="170" gr:y="500" id="sv1#area6" name="My exhibition" landmark="true" defaultPage="sv1#area6#page14">
+  <OperationUnits>
+    <ModifyUnit gr:x="160" gr:y="10" id="sv1#area6#mfu15" name="Update15" entity="ent1">
+      <Selector id="sv1#area6#mfu15#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area6#mfu15#su30#kcond32" name="KeyCondition32" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <GetUnit gr:x="165" gr:y="150" id="sv1#area6#gtu15" name="Get15" contextParameters="UserCtxParam">
+      <Link id="sv1#area6#gtu15#ln93" name="Flow93" to="sv1#area6#mfu15" type="transport" validate="true">
+        <LinkParameter id="sv1#area6#gtu15#ln93#par215" name="UserCtxParam.id_KeyCondition32 [leader]" source="sv1#area6#gtu15.UserCtxParam" target="sv1#area6#mfu15#su30#kcond32.ent1#att14"/>
+        <LinkParameter id="sv1#area6#gtu15#ln93#par216" name="UserCtxParam.id_user.id(ExhibitionToUser)" source="sv1#area6#gtu15.UserCtxParam" target="sv1#area6#mfu15.rel25#role49.userOID"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</Area>

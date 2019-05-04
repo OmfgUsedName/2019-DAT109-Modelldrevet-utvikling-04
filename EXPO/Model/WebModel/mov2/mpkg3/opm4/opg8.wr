@@ -1,0 +1,23 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="535" gr:y="90" id="mov2#mpkg3#opm4#opg8" name="Operation Group 8" transaction="false">
+  <OperationUnits>
+    <DeleteUnit gr:x="0" gr:y="0" id="mov2#mpkg3#opm4#opg8#dlu1" name="Delete exhibition" entity="ent1">
+      <Selector id="mov2#mpkg3#opm4#opg8#dlu1#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg3#opm4#opg8#dlu1#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2#mpkg3#opm4#opg8#dlu1#kln3" name="KOFlow3" to="mov2#mpkg3#opm4#kocu5">
+        <LinkParameter id="mov2#mpkg3#opm4#opg8#dlu1#kln3#par157" name="exhibition does not exist_Exhibition does not exist" sourceValue="exhibition does not exist" target="mov2#mpkg3#opm4#kocu5#ocp5"/>
+      </KOLink>
+      <CascadeDeleteRole id="mov2#mpkg3#opm4#opg8#dlu1#cdr1" name="Cascade Delete Role1"/>
+      <CascadeDeleteRole id="mov2#mpkg3#opm4#opg8#dlu1#cdr2" name="Cascade Delete Role2"/>
+      <OKLink id="mov2#mpkg3#opm4#opg8#dlu1#oln73" name="OKFlow73" to="mov2#mpkg3#opm4#opg8#mfu23">
+        <LinkParameter id="mov2#mpkg3#opm4#opg8#dlu1#oln73#par338" name="$$NULL$$_Group.oid(defaultGroup)" sourceValue="$$NULL$$" target="mov2#mpkg3#opm4#opg8#mfu23.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#mpkg3#opm4#opg8#dlu1#oln73#par339" name="$$NULL$$_Group.oid(groups)" sourceValue="$$NULL$$" target="mov2#mpkg3#opm4#opg8#mfu23.User2Group.groupOID"/>
+      </OKLink>
+    </DeleteUnit>
+    <ModifyUnit gr:x="65" gr:y="130" id="mov2#mpkg3#opm4#opg8#mfu23" name="Update23" entity="User">
+      <Selector id="mov2#mpkg3#opm4#opg8#mfu23#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg3#opm4#opg8#mfu23#su45#kcond47" name="KeyCondition47" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationGroup>

@@ -1,0 +1,7 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area1" name="Home" landmark="true" gr:x="95" gr:y="90" defaultPage="sv1#area1#page13">
+  <OperationUnits/>
+  <Comment xml:space="preserve">This Area contains the pages to show the generic information of Books and all the other related details (Categories etc). 
+
+A logged in user can also see his Cart and manage it. 
+
+</Comment></Area>
